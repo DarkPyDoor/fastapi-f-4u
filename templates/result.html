@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Result</title>
+</head>
+<body>
+    <h1>OCR Result</h1>
+    <img src="{{ url_for('static', filename='image.jpg') }}" alt="Processed Image">
+    <ul>
+        {% for prediction in predictions %}
+            <li>{{ prediction[0] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
